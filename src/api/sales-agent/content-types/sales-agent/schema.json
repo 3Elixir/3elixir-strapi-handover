@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_agents",
+  "info": {
+    "singularName": "sales-agent",
+    "pluralName": "sales-agents",
+    "displayName": "salesAgent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "inversedBy": "sales_agents"
+    },
+    "agentID": {
+      "type": "string"
+    }
+  }
+}

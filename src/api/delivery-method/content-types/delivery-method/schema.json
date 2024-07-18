@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "delivery_methods",
+  "info": {
+    "singularName": "delivery-method",
+    "pluralName": "delivery-methods",
+    "displayName": "deliveryMethod",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fulfilmentMethod": {
+      "type": "string"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "fulfilment_method"
+    }
+  }
+}
